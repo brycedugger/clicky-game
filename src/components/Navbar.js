@@ -7,9 +7,6 @@ function Navbar (props) {
             <a className="navbar-brand" href="/">
                 Clicky Game
             </a>
-            <ul className="navbar-nav mr-auto">
-                <li class="message">{props.message}</li>
-            </ul>
             <ul className="navbar-nav float-right">
                 <li className="nav-item">
                     Score: {props.score} | Top Score: {props.topScore}

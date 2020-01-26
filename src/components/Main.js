@@ -90,25 +90,24 @@ class Main extends Component {
     //render() cards and set up container in html
     render() {
         return (
-            <main className="container">
-                <div className="jumbotron">
-                    <h5>Clicky Game!</h5>
-                    <h2>Click on an image to earn points, but don't click on any more than once!</h2>
+            <div className="container">
+                <div className="container mb-5 mt-5">
+                    <h5>Click on an image to earn points, but don't click on any more than once!</h5>
                 </div>
                 <div className='row'>
-                    {this.state.cards.map(test => {
+                    {this.state.cards.map(img => {
                         return (
                             <Card
                                 //key required for each individual instance for
                                 //properties seperation between cards in object
-                                key={test.id}
-                                image={test}
+                                key={img.id}
+                                image={img}
                                 cardClicked={this.cardClicked}
                             />
-                        )
+                        );
                     })}
                 </div>
-            </main>
+            </div>
         )
     }
 }

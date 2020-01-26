@@ -1,15 +1,12 @@
 import React, { Component } from "react";
-// import React from "react";
 import "./App.css";
 
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
-import Footer from "./components/Footer";
 
 class App extends Component {
 
   state = {
-    message: "Pick a Card",
     score: 0,
     topScore: 0
   };
@@ -18,9 +15,8 @@ class App extends Component {
   incrementScore = () => {
     this.setState({
       score: this.state.score + 1,
-      message: "Correct!"
     }, () => {
-      if (this.setTopScore >= this.state.topscore) {
+      if (this.state.score >= this.state.topScore) {
         this.setTopScore(this.state.score);
       }
     });
@@ -36,14 +32,14 @@ class App extends Component {
     if (this.state.score === 12) {
       this.setState({
         score: 0,
-        message: "You won! Restarting game..."
       })
+      alert("You won! Restarting game...");
     }
     else {
       this.setState({
         score: 0,
-        message: "You lost! Try again..."
       })
+      alert("You lost! Try again...");
     }
   };
 
@@ -54,7 +50,6 @@ class App extends Component {
         <Navbar
           // these are in App.js because child component does not
           // have access to the state
-          message={this.state.message}
           score={this.state.score}
           topScore={this.state.topScore}
         />
@@ -65,7 +60,6 @@ class App extends Component {
           incrementScore={this.incrementScore}
           resetScore={this.resetScore}
         />
-        <Footer />
       </React.Fragment>
     );
   }
