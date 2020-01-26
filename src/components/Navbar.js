@@ -4,7 +4,7 @@ import "../App.css";
 function Navbar (props) {
     return (
         <nav className="navbar fixed top navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="/">
+            <a className="navbar-brand">
                 Clicky Game
             </a>
             <ul className="navbar-nav float-right">
