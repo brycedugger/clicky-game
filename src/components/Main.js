@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import cardJson from "../cards.json";
-// import Card from "./Card";
+import Card from "./Card";
 
 class Main extends Component {
 
@@ -26,7 +26,7 @@ class Main extends Component {
             this.shuffleArray(this.state.cards)
             
             //Sends new card layout after shuffleArray has completed
-            this.setState ({ cards });
+            this.setState ({ cards });s
         }
     }
 
@@ -95,7 +95,7 @@ class Main extends Component {
                     <h5>Click on an image to earn points, but don't click on any more than once!</h5>
                 </div>
                 <div className='row'>
-                    {/* {this.state.cards.map(img => {
+                    {this.state.cards.map(img => {
                         return (
                             <Card
                                 //key required for each individual instance for
@@ -105,7 +105,7 @@ class Main extends Component {
                                 cardClicked={this.cardClicked}
                             />
                         );
-                    })} */}
+                    })}
                 </div>
             </div>
         )
