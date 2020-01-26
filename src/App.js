@@ -3,7 +3,7 @@ import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from "./components/Navbar";
-import Main from "./components/Main";
+// import Main from "./components/Main";
 
 class App extends Component {
 
@@ -54,13 +54,13 @@ class App extends Component {
           score={this.state.score}
           topScore={this.state.topScore}
         />
-        <Main
+        {/* <Main
           score={this.state.score}
           topScore={this.state.topScore}
           setMessage={this.setMessage}
           incrementScore={this.incrementScore}
           resetScore={this.resetScore}
-        />
+        /> */}
       </React.Fragment>
     );
   }
