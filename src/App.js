@@ -46,23 +46,23 @@ class App extends Component {
 
 
   render() {
-    // return (
-    //   <React.Fragment>
-    //     <Navbar
-    //       // these are in App.js because child component does not
-    //       // have access to the state
-    //       score={this.state.score}
-    //       topScore={this.state.topScore}
-    //     />
-    //     <Main
-    //       score={this.state.score}
-    //       topScore={this.state.topScore}
-    //       setMessage={this.setMessage}
-    //       incrementScore={this.incrementScore}
-    //       resetScore={this.resetScore}
-    //     />
-    //   </React.Fragment>
-    // );
+    return (
+      <React.Fragment>
+        <Navbar
+          // these are in App.js because child component does not
+          // have access to the state
+          score={this.state.score}
+          topScore={this.state.topScore}
+        />
+        <Main
+          score={this.state.score}
+          topScore={this.state.topScore}
+          setMessage={this.setMessage}
+          incrementScore={this.incrementScore}
+          resetScore={this.resetScore}
+        />
+      </React.Fragment>
+    );
   }
 }
 
